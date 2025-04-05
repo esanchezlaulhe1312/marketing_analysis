@@ -11,7 +11,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Archivos de datos
-*.csv
 *.xlsx
 *.xls
 *.json
@@ -27,6 +26,17 @@ __pycache__/
 *.out
 *.bak
 
-# Dashboards u otros outputs si no deseas subirlos
-*.pbix
-*.twbx
+# Evita subir archivos gigantes sin formato
+Data/*
+!Data/*.csv
+
+# Backups automáticos de notebooks
+*.ipynb~  
+
+# JupyterLab hidden folders
+.jupyter/
+
+# Archivos de configuración secretos
+*.env
+*.key
+*.pem
