@@ -1,6 +1,7 @@
 # Análisis Exploratorio de Datos (EDA) - TodoMktg
 
 **Nombre ficticio de la empresa:** *TodoMktg*  
+
 **Misión:** Ofrecer servicios personalizados de marketing digital a diferentes sectores, utilizando datos para optimizar campañas y maximizar resultados.
 
 ---
@@ -67,6 +68,7 @@ Creado por Emma Goldman - esanchezlaulhe1312
 # Exploratory Data Analysis (EDA) - TodoMktg (ENGLISH VERSION)
 
 **Fictional company name**: *TodoMktg*
+
 **Mission**: To offer personalized digital marketing services to various sectors, using data to optimize campaigns and maximize results.
 
 ---
