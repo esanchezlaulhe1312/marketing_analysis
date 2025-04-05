@@ -17,10 +17,6 @@
 
 marketing_analysis/ ├── Data/ │ └── mkteda_transformacionylimpieza.csv ├── Jupyters/ │ └── eda_preliminar.ipynb ├── .gitignore ├── requirements.txt └── README.md
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🧰 Tecnologías utilizadas
@@ -35,14 +31,11 @@ Edit
 
 ## 📦 Cómo reproducir este proyecto
 
-1. Clona el repositorio:
+Clona el repositorio:
    ```bash
    git clone https://github.com/esanchezlaulhe1312/marketing_analysis.git
 Crea un entorno virtual e instala las dependencias:
 
-bash
-Copy
-Edit
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
@@ -66,8 +59,7 @@ Extract actionable insights to support informed decision-making.
 Develop strategic adjustments to improve ROI and audience segmentation.
 
 🗂️ Repository structure
-Copy
-Edit
+
 marketing_analysis/
 ├── Data/
 │   └── mkteda_transformacionylimpieza.csv
@@ -90,15 +82,9 @@ Git & GitHub – version control
 📦 How to run this project
 Clone the repository:
 
-bash
-Copy
-Edit
 git clone https://github.com/esanchezlaulhe1312/marketing_analysis.git
 Create a virtual environment and install dependencies:
 
-bash
-Copy
-Edit
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
