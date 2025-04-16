@@ -32,3 +32,35 @@ def graficar_categoricas(df_limpio):
         fig.delaxes(axes[j])
     plt.tight_layout()
     plt.show()
+    
+def subplot_col_num_hist (dataframe,col):
+    num_graph=len(col)
+    num_rows= (num_graph +2)//3
+    fig,axes=plt.subplots(num_rows,3, figsize=(15, num_rows*5))
+    axes = axes.flatten()
+    for i, col in enumerate(col):
+        sns.histplot(data=dataframe, x=col, ax=axes[i], bins=200)
+        axes[i].text(0.8, 0.9, f'Media:{round(dataframe[col].mean(),4)}', horizontalalignment='center', verticalalignment='center', transform=axes[i].transAxes)
+        axes[i].text(0.8, 0.8, f'Mediana:{dataframe[col].median()}', horizontalalignment='center', verticalalignment='center', transform=axes[i].transAxes)
+        axes[i].set_title(f'Distribución de {col}')
+        axes[i].set_ylabel('Frecuencia')
+        # borrar los dos últimos gráficos que no tienen datos
+    for j in range(i+1, len(axes)):
+        fig.delaxes(axes[j])
+    plt.tight_layout()
+    plt.show()
+
+
+def subplot_col_num_boxplot (dataframe,col):
+    num_graph=len(col)
+    num_rows= (num_graph +2)//3
+    fig,axes=plt.subplots(num_rows,3, figsize=(15, num_rows*5))
+    axes = axes.flatten()
+    for i, col in enumerate(col):
+        sns.boxplot(data=dataframe, x=col, ax=axes[i])
+        axes[i].set_title(f'Boxplot de {col}')
+    # borrar los dos últimos gráficos que no tienen datos
+    for j in range(i+1, len(axes)):
+        fig.delaxes(axes[j])
+plt.tight_layout()
+plt.show()
