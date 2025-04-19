@@ -1,135 +1,125 @@
-# Análisis Exploratorio de Datos (EDA) - TodoMktg
+# 📊 Análisis Exploratorio de Marketing – TodoMktg
 
-**Nombre ficticio de la empresa:** *TodoMktg*  
-
-**Misión:** Ofrecer servicios personalizados de marketing digital a diferentes sectores, utilizando datos para optimizar campañas y maximizar resultados.
-
----
-
-## Objetivos del análisis
-
-- Identificar factores de éxito y áreas de mejora en campañas previas.
-- Extraer insights accionables para mejorar la toma de decisiones.
-- Desarrollar recomendaciones estratégicas para optimizar el ROI y mejorar la segmentación de audiencia.
+**Autora:** Elena Sánchez Laulhé  
+**Descripción:** Proyecto de análisis exploratorio aplicado a campañas de marketing con el objetivo de detectar patrones, optimizar decisiones y mejorar futuras estrategias comerciales.
 
 ---
 
-## Estructura del repositorio
+## 🎯 Objetivos del Proyecto
+
+- Explorar y comprender los datos de campañas de marketing.
+- Detectar variables influyentes en la conversión.
+- Automatizar tareas de limpieza y visualización mediante scripts modulares.
+- Desarrollar un entorno base para futuros análisis predictivos o segmentación de clientes.
+
+---
+
+## 🗂 Estructura del Repositorio
 
 ```
 marketing_analysis/
+│
 ├── Data/
-│   └── mkteda_transformacionylimpieza.csv
+│   ├── marketing_campaign.csv             # Dataset original
+│   ├── mktgeda_cleaning.csv               # Limpieza intermedia
+│   ├── mktgeda_datos_limpios.csv          # Dataset final transformado
+│   └── mktgeda_metricas.csv               # Métricas agregadas (edad, gasto medio, etc.)
+│
 ├── Jupyters/
-│   └── eda_preliminar.ipynb
-├── .gitignore
-├── requirements.txt
-└── README.md
-
+│   ├── columnas_categoricas_nulos.ipynb   # Análisis de valores nulos en variables categóricas
+│   ├── columnas_numericas.ipynb           # Estadísticas y distribuciones de numéricas
+│   ├── eda_preliminar.ipynb               # Notebook principal de análisis exploratorio
+│   ├── limpieza.ipynb                     # Proceso completo de limpieza
+│   └── marketing.ipynb                    # Notebook de exploración general
+│
+├── SRC/
+│   ├── sp_eda.py                          # Funciones generales de EDA
+│   ├── sp_limpieza.py                     # Funciones de limpieza de datos
+│   ├── sp_nulos_num.py                    # Tratamiento de nulos en columnas numéricas
+│   ├── sp_outliers.py                     # Identificación y tratamiento de outliers
+│   └── sp_visual.py                       # Visualizaciones personalizadas
+│
+├── requirements.txt                       # Dependencias del proyecto
+├── .gitignore                             # Exclusión de archivos innecesarios en Git
+└── README.md                              # Este documento
 ```
 
 ---
 
-## Tecnologías utilizadas
+## ⚙️ Librerías y Herramientas
 
 - Python 3.12.5
+- Pandas, NumPy
+- Seaborn, Matplotlib
 - Jupyter Notebook
-- Pandas – manipulación y limpieza de datos
-- Matplotlib / Seaborn – visualización de datos
-- Git & GitHub – control de versiones
+- Git & GitHub
 
 ---
 
-## Cómo reproducir este proyecto
+## ▶️ Cómo Ejecutar el Proyecto
 
-1. Clona el repositorio:
+1. Clona este repositorio:
+
    ```bash
    git clone https://github.com/esanchezlaulhe1312/marketing_analysis.git
+   cd marketing_analysis
    ```
 
-2. Crea un entorno virtual e instala dependencias
+2. (Opcional) Crea un entorno virtual:
+
    ```bash
    python -m venv venv
-   venv\Scripts\activate
+   source venv/bin/activate  # En Windows: venv\Scripts\activate
    ```
 
-## Visualizaciones
+3. Instala las dependencias:
 
-en proceso
-
----
-
-## Autor
-
-Creado por Emma Goldman - esanchezlaulhe1312
-
----
-
-# Exploratory Data Analysis (EDA) - TodoMktg (ENGLISH VERSION)
-
-**Fictional company name**: *TodoMktg*
-
-**Mission**: To offer personalized digital marketing services to various sectors, using data to optimize campaigns and maximize results.
-
----
-
-## Main objectives
-
-- Identify success factors and improvement areas in past campaigns.
-- Extract actionable insights to support informed decision-making.
-- Develop strategic adjustments to improve ROI and audience segmentation.
-
----
-
-## Repository structure
-
-```
-marketing_analysis/
-├── Data/
-│   └── mkteda_transformacionylimpieza.csv
-├── Jupyters/
-│   └── eda_preliminar.ipynb
-├── .gitignore
-├── requirements.txt
-└── README.md
-
-```
-
----
-
-## Technologies used
-
-- Python 3.12.5
-- Jupyter Notebook
-- Pandas – data manipulation
-- Matplotlib / Seaborn – data visualization
-- Git & GitHub – version control
-
----
-
-## How to run this project
-
-1. Clone the repository:
    ```bash
-   git clone https://github.com/esanchezlaulhe1312/marketing_analysis.git
+   pip install -r requirements.txt
    ```
 
-2. Create a virtual environment and install dependencies:
+4. Abre los notebooks en Jupyter:
    ```bash
-   python -m venv venv
-   venv\Scripts\activate
+   jupyter notebook
    ```
----
-
-## Visualizations
-
-Graphs and visualizations will be added progressively as the project develops.
 
 ---
 
-## Author
+## 📈 Contenido del Análisis
 
-Created by Emma Goldman - esanchezlaulhe1312
+- Análisis de valores nulos y su tratamiento por tipo de variable.
+- Detección de outliers mediante métodos gráficos y estadísticos.
+- Generación de métricas clave: edad, gasto medio, frecuencia de compra...
+- Visualizaciones multivariantes.
+- Modularización del flujo de trabajo: funciones reutilizables para futuros datasets.
+
+---
+
+## 🛠 Scripts Destacados
+
+| Script            | Funcionalidad                                             |
+| ----------------- | --------------------------------------------------------- |
+| `sp_eda.py`       | Funciones generales para análisis exploratorio.           |
+| `sp_limpieza.py`  | Procesamiento de datos: nulos, formatos, estandarización. |
+| `sp_nulos_num.py` | Detección y tratamiento de nulos en columnas numéricas.   |
+| `sp_outliers.py`  | Identificación y gestión de outliers.                     |
+| `sp_visual.py`    | Visualizaciones automatizadas con Seaborn y Matplotlib.   |
+
+---
+
+## 🔮 Siguientes Pasos
+
+- Aplicar algoritmos de clustering (K-Means, DBSCAN) para segmentación.
+- Crear dashboard interactivo con Streamlit o Power BI.
+- Incorporar validación de modelos y comparación de métricas.
+
+---
+
+## 👩‍💻 Autoría
+
+Este proyecto ha sido desarrollado por Elena Sánchez Laulhé como parte de su formación en analítica de datos aplicada al marketing.
+
+GitHub: [@esanchezlaulhe1312](https://github.com/esanchezlaulhe1312)
 
 ---
 
