@@ -82,3 +82,58 @@ def subplot_col_num_2 (dataframe,col):
         fig.delaxes(axes[j])
 plt.tight_layout()
 plt.show()
+
+def analyze_ctr(dataframe, outliers=False):
+  if outliers==True:
+   ctr_by_campaign=dataframe.groupby('campaign_type')['CTR'].mean().sort_values(ascending=False)
+   ctr_by_channel=dataframe.groupby('channel_used')['CTR'].mean().sort_values(ascending=False)
+  else:
+   ctr_by_campaign=dataframe.groupby('campaign_type')['CTR'].median().sort_values(ascending=False)
+   ctr_by_channel=dataframe.groupby('channel_used')['CTR'].median().sort_values(ascending=False)  
+  print('CTR promedio por tipo de campaña:')
+  print(ctr_by_campaign, '\n')
+  print('CTR promedio por canal utilizado:')
+  print(ctr_by_channel, '\n')
+
+  fig, axes=plt.subplots(1,2,figsize=(16,6))
+
+  sns.barplot(x=ctr_by_campaign.index, y=ctr_by_campaign.values,palette='coolwarm',hue=ctr_by_campaign.index,ax=axes[0])
+  axes[0].set_title('CTR por tipo de campaña')
+  axes[0].set_xticklabels(ctr_by_campaign.index, rotation=45)
+  axes[0].tick_params(axis='x',labelsize=10)
+  axes[0].tick_params(axis='y',labelsize=10)
+  
+  sns.barplot(x=ctr_by_channel.index, y=ctr_by_channel.values,palette='viridis',hue=ctr_by_channel.index,ax=axes[1])
+  axes[1].set_title('CTR por canal utilizado')
+  axes[1].set_xticklabels(ctr_by_channel.index, rotation=45)
+  axes[1].tick_params(axis='x',labelsize=10)
+  axes[1].tick_params(axis='y',labelsize=10)
+  plt.tight_layout()
+  
+def analyze_conversion(dataframe, outliers=False):
+    metrics=['conversion_cost','conversion_value']
+    if outliers==True:
+     for metric in metrics:
+        metric_by_channel=dataframe.groupby('channel_used')[metric].mean().sort_values(ascending=False)
+        metric_by_segment=dataframe.groupby('customer_segment')[metric].mean().sort_values(ascending=False)
+    else:
+        metric_by_channel=dataframe.groupby('channel_used')[metric].median().sort_values(ascending=False)
+        metric_by_segment=dataframe.groupby('customer_segment')[metric].median().sort_values(ascending=False)  
+    print('conversion rate promedio por canal utilizado')
+    print(metric_by_channel, '\n')
+    print('conversion rate promedio por segmento de cliente:')
+    print(metric_by_segment, '\n')
+    
+    fig, axes=plt.subplots(1,2,figsize=(16,6))
+    sns.barplot(x=metric_by_channel.index, y=metric_by_channel.values,palette='coolwarm',hue=metric_by_channel.index,ax=axes[0])
+    axes[0].set_title('conversion rate por canal utilizado')
+    axes[0].set_xticklabels(metric_by_channel.index, rotation=45)
+    axes[0].tick_params(axis='x',labelsize=10)
+    axes[0].tick_params(axis='y',labelsize=10)
+    
+    sns.barplot(x=metric_by_segment.index, y=metric_by_segment.values,palette='viridis',hue=metric_by_segment.index,ax=axes[1])
+    axes[1].set_title('conversion rate por segmento de cliente')
+    axes[1].set_xticklabels(metric_by_segment.index, rotation=45)
+    axes[1].tick_params(axis='x',labelsize=10)
+    axes[1].tick_params(axis='y',labelsize=10)
+    plt.tight_layout()
