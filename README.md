@@ -1,11 +1,10 @@
-# 📊 Análisis Exploratorio de Marketing – TodoMktg
+# Análisis Exploratorio de Marketing – TodoMktg
 
-**Autora:** Elena Sánchez Laulhé  
 **Descripción:** Proyecto de análisis exploratorio aplicado a campañas de marketing con el objetivo de detectar patrones, optimizar decisiones y mejorar futuras estrategias comerciales.
 
 ---
 
-## 🎯 Objetivos del Proyecto
+## Objetivos del Proyecto
 
 - Explorar y comprender los datos de campañas de marketing.
 - Detectar variables influyentes en la conversión.
@@ -46,46 +45,25 @@ marketing_analysis/
 
 ---
 
-## ⚙️ Librerías y Herramientas
+## Librerías y Herramientas
 
 - Python 3.12.5
 - Pandas, NumPy
 - Seaborn, Matplotlib
 - Jupyter Notebook
-- Git & GitHub
 
 ---
 
-## ▶️ Cómo Ejecutar el Proyecto
+## Cómo Ejecutar el Proyecto
 
-1. Clona este repositorio:
+Clona este repositorio:
 
    ```bash
    git clone https://github.com/esanchezlaulhe1312/marketing_analysis.git
    cd marketing_analysis
    ```
 
-2. (Opcional) Crea un entorno virtual:
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # En Windows: venv\Scripts\activate
-   ```
-
-3. Instala las dependencias:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Abre los notebooks en Jupyter:
-   ```bash
-   jupyter notebook
-   ```
-
----
-
-## 📈 Contenido del Análisis
+## Contenido del Análisis
 
 - Análisis de valores nulos y su tratamiento por tipo de variable.
 - Detección de outliers mediante métodos gráficos y estadísticos.
@@ -107,17 +85,15 @@ marketing_analysis/
 
 ---
 
-## 🔮 Siguientes Pasos
+## Siguientes Pasos
 
-- Aplicar algoritmos de clustering (K-Means, DBSCAN) para segmentación.
-- Crear dashboard interactivo con Streamlit o Power BI.
+- Aplicar algoritmos de clustering
+- Crear dashboard 
 - Incorporar validación de modelos y comparación de métricas.
 
 ---
 
-## 👩‍💻 Autoría
-
-Este proyecto ha sido desarrollado por Elena Sánchez Laulhé como parte de su formación en analítica de datos aplicada al marketing.
+## Autoría
 
 GitHub: [@esanchezlaulhe1312](https://github.com/esanchezlaulhe1312)
 
