@@ -69,7 +69,7 @@ def subplot_col_num_2 (dataframe,col):
     num_graph=len(col)
     num_rows= (num_graph +2)//2
     
-    fig,axes=plt.subplots(num_graph,2, figsize=(15, num_rows*5))
+    fig,axes=plt.subplots(num_graph,2, figsize=(15, num_rows*5), constrained_layout=True)
     
     for i, col in enumerate(col):
         sns.histplot(data=dataframe, x=col, ax=axes[i,0], bins=200)
